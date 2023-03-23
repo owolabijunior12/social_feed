@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import PostList from "./PostList";
+import Navbar from "./Navbar";
+import CreatePostForm from "./CreatePostForm";
+import { useState } from "react";
 
 function App() {
+  var [postData, setPostData] = useState([
+    {
+      user: "Favour ThankGod",
+      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
+    },
+    {
+      user: "Elizabeth Queen",
+      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
+    },
+    {
+      user: "Genius Dephx",
+      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
+    },
+    {
+      user: "Django Lover",
+      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
+    },
+    {
+      user: "Favour ThankGod",
+      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
+    },
+    {
+      user: "Favour ThankGod",
+      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
+    },
+    {
+      user: "Favour ThankGod",
+      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
+    },
+  ]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <PostList postData={postData} />
+      <CreatePostForm postData={postData} setPostData={setPostData} />
     </div>
   );
 }

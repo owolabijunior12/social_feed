@@ -1,0 +1,9 @@
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
