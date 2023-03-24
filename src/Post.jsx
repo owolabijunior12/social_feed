@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Post.css";
 
-function Post({ user, body }) {
+function Post({ user, body,timestamp }) {
   const [liked, setLiked] = useState(false);
   const [disliked, setDisliked] = useState(false);
   const handleLike = () => {
@@ -21,7 +21,7 @@ function Post({ user, body }) {
   return (
     <div className="post">
       <div className="post-user">{user}</div>
-      <div className="post-body">{body}</div>
+      <div className="post-body">{body}-- {timestamp}</div>
       <div className="post-actions">
         <button
           className={`btn btn-primary mr-2 ${liked ? "liked" : ""}`}

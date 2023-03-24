@@ -8,13 +8,12 @@ function CreatePostForm({ postData, setPostData }) {
   const createPost = (e) => {
     e.preventDefault();
 
-    setUser("");
-    setBody("");
     console.log(postData);
 
     const newPost = {
       user: user,
       body: body,
+      timestamp: new Date().toISOString(),
     };
 
     setUser("");

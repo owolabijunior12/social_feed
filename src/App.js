@@ -10,30 +10,7 @@ function App() {
     {
       user: "Favour ThankGod",
       body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
-    },
-    {
-      user: "Elizabeth Queen",
-      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
-    },
-    {
-      user: "Genius Dephx",
-      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
-    },
-    {
-      user: "Django Lover",
-      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
-    },
-    {
-      user: "Favour ThankGod",
-      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
-    },
-    {
-      user: "Favour ThankGod",
-      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
-    },
-    {
-      user: "Favour ThankGod",
-      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
+      timestamp:new Date().toISOString(),
     },
   ]);
 

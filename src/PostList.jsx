@@ -6,7 +6,14 @@ function PostList({ postData }) {
   return (
     <div className="post-list">
       {postData.map((item, index) => {
-        return <Post user={item.user} body={item.body} />;
+        return (
+          <Post
+            key={index}
+            user={item.user}
+            body={item.body}
+            timestamp={item.timestamp}
+          />
+        );
       })}
     </div>
   );
