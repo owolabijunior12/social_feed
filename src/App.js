@@ -1,24 +1,27 @@
-import logo from "./logo.svg";
-import "./App.css";
-import PostList from "./PostList";
-import Navbar from "./Navbar";
-import CreatePostForm from "./CreatePostForm";
-import { useState } from "react";
-
+import SearchBar from "./SearchBar";
+import MusicTable from "./MusicTable";
+import NavigationBar from "./NavigationBar";
+import "tailwindcss/tailwind.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 function App() {
-  var [postData, setPostData] = useState([
-    {
-      user: "Favour ThankGod",
-      body: "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, blanditiis adipisci. Dolorum repellat officia ea sint dolores tenetur, nobis quasi! ",
-      timestamp:new Date().toISOString(),
-    },
-  ]);
+  let [music, setMusic] = useState([]);
 
+  useEffect(() => {
+    axios
+      .get("http://localhost:8000/api/songs/")
+      .then((response) => {
+        setMusic(response.data);
+      })
+      .then((error) => {
+        console.error(error);
+      });
+  }, []);
   return (
-    <div className="App">
-      <Navbar />
-      <PostList postData={postData} />
-      <CreatePostForm postData={postData} setPostData={setPostData} />
+    <div className="App ">
+      <NavigationBar />
+      <SearchBar />
+      <MusicTable music={music} setMusic={setMusic} />
     </div>
   );
 }
